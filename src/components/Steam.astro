@@ -45,24 +45,14 @@ const steamRecentGamesList = mysteamgames.map(async (game) => {
 const steamRecentGames = await Promise.all(steamRecentGamesList);
 ---
 
-<section>
-  {
-    steamRecentGames.map((game, index) => (
-      <div class="pl-1 md:basis-1/2 lg:basis-1/3">
-        <div class="flex flex-col items-center">
-          <img
-            src={game.game_image_url}
-            alt={game.name}
-            class="rounded-lg w-300 h-450"
-            width={600}
-            height={900}
-          />
-          <p class="text-center">{game.name}</p>
-          <p class="text-center">
-            {Math.floor(game.playtime_forever / 60)} hours
-          </p>
-        </div>
+<section class="grid grid-cols-4 gap-4 w-1/2">
+  {steamRecentGames.map((game) => (
+    <div class="bg-[#85dadd] rounded-lg p-4">
+      <img src={game.game_image_url} alt={game.name} class="rounded-lg w-full h-auto" />
+      <div class="mt-4">
+        <p class="text-center font-bold">{game.name}</p>
+        <p class="text-center">{Math.floor(game.playtime_forever / 60)} hours</p>
       </div>
-    ))
-  }
+    </div>
+  ))}
 </section>

@@ -1,11 +1,23 @@
 ---
 import "@/styles/globals.css";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Steam from "../components/Steam.astro";
 ---
 
 <Layout title="Welcome to Hell">
-  <div class="min-h-[60%] border-8 border-black w-screen"></div>
-  <Steam />
+  <section class="flex flex-col items-center justify-center w-full h-full">
+    <h1 class="text-4xl font-bold">Welcome to Hell</h1>
+    <p class="text-lg">This is a simple Astro app with Tailwind CSS</p>
+    <section class="flex flex-wrap justify-center w-full mt-8" id="background">
+      
+      <Steam />
+      </section>
+
+  </section>
 </Layout>
+<style>
+  #background {
+    background: url(../mountains.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+</style>
