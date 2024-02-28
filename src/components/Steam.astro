@@ -1,13 +1,4 @@
-import { useState,useEffect } from "react";
-import { type CarouselApi } from "@/components/ui/carousel"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
+---
 interface Game {
     appid: number;
     playtime_forever: number;
@@ -49,43 +40,19 @@ const steamRecentGamesList = mysteamgames.map(
 );
 
 const steamRecentGames = await Promise.all(steamRecentGamesList);
+---
 
-export default function Steam(){
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
- 
-  useEffect(() => {
-    if (!api) {
-      return
-    }
- 
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
- 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
-  return(
     <section>
-    <Carousel className="w-full max-w-sm" setApi={setApi}>
-        <CarouselContent className="-ml-1">
+  
       
   {steamRecentGames.map((game,index) => (
-<CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-    <div className="flex flex-col items-center">
-    <img src={game.game_image_url} alt={game.name} className="rounded-lg w-300 h-450" width={600} height={900} />
-    <p className="text-center">{game.name}</p>
-    <p className="text-center">{Math.floor(game.playtime_forever / 60)} hours</p>
+<div class="pl-1 md:basis-1/2 lg:basis-1/3">
+    <div class="flex flex-col items-center">
+    <img src={game.game_image_url} alt={game.name} class="rounded-lg w-300 h-450" width={600} height={900} />
+    <p class="text-center">{game.name}</p>
+    <p class="text-center">{Math.floor(game.playtime_forever / 60)} hours</p>
   </div>
-    </CarouselItem>
+    </div>
   ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-</section>
 
-  )
-}
+</section>
