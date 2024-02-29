@@ -10,27 +10,21 @@ import mc_logo from "../mc_logo.jpg"
 
 <Layout title="Welcome to Hell">
   <nav class="bg-[#000000] top-0 w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center h-16 justify-evenly">
-        <div class="flex items-center">
-          <div class="flex-shrink-0">
-            <a href="/">
-            <Image
-              class="h-8 w-8 rounded-lg"
-              src={mc_logo}
-              alt="Logo of a minecraft character"
-            />
-          </a>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4 ">
+    <div class="max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center h-16 justify-between border">
+        <div class="flex items-center border">
+          <div class="flex shrink-0 ml-10 space-x-4 border">
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out">Music</a>
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out">About</a>
+              <a href="/">
+                <Image
+                  class="h-8 w-8 rounded-lg"
+                  src={mc_logo}
+                  alt="Logo of a minecraft character"
+                />
+              </a>
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out">Contact</a>
-            </div>
           </div>
-        </div>
-      </div>
     </div>
   </nav>
   <section class="flex flex-col items-center justify-center w-full h-full">
