@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import "@fontsource/ubuntu";
+import "@fontsource/inter";
 import Layout from "../layouts/Layout.astro";
 import Steam from "../components/Steam.astro";
 import { Image } from "astro:assets";
@@ -11,22 +11,22 @@ import mc_logo from "../mc_logo.jpg";
 <Layout title="Welcome to Hell">
   <nav class="bg-[#000000] top-0 w-full">
     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
+      <div class="flex h-24 items-center justify-between">
         <div class="flex items-center">
           <a
           href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
             >About</a
           >
           <a
           href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
           >Music</a
           >
           </div>
           <a href="/">
             <Image
-              class="h-8 w-8 rounded-lg mx-auto relative right-9"
+              class="h-16 w-16 rounded-lg mx-auto relative right-9"
               src={mc_logo}
               alt="Logo of a minecraft character"
             />
@@ -34,7 +34,7 @@ import mc_logo from "../mc_logo.jpg";
           <div class="flex items-center">
           <a
             href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
             >Contact</a
           >
         </div>
@@ -50,8 +50,8 @@ import mc_logo from "../mc_logo.jpg";
         height={1377}
         class="lg:min-w-full min-w-[250%]"
       />
-      <div class="absolute inset-0 flex flex-col items-center justify-center">
-        <h1 class="text-6xl font-bold text-black">Thomas' Website</h1>
+      <div class="absolute inset-0 flex flex-col mx-32 my-[170px]">
+        <h1 class="text-7xl font-black text-white">THOMAS HAWKINS</h1>
       </div>
     </div>
     <section class="flex flex-wrap justify-center w-full min-h-screen">
@@ -62,6 +62,6 @@ import mc_logo from "../mc_logo.jpg";
 
 <style>
   * {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 </style>
