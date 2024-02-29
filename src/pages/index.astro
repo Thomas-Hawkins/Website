@@ -42,13 +42,18 @@ import mc_logo from "../mc_logo.jpg";
     </div>
   </nav>
   <section class="flex flex-col items-center justify-center w-full h-full">
-    <Image
-      src={mountains}
-      alt="Image of mountains in Austrian Alps"
-      width={4000}
-      height={1377}
-      class="lg:min-w-full min-w-[250%]"
-    />
+    <div class="relative">
+      <Image
+        src={mountains}
+        alt="Image of mountains in Austrian Alps"
+        width={4000}
+        height={1377}
+        class="lg:min-w-full min-w-[250%]"
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-6xl font-bold text-black">Thomas' Website</h1>
+      </div>
+    </div>
     <section class="flex flex-wrap justify-center w-full min-h-screen">
       <Steam />
     </section>
