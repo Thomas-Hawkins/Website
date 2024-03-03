@@ -7,6 +7,7 @@ import Music from "../components/Music.astro";
 import { Image } from "astro:assets";
 import mc_logo from "../mc_logo.jpg";
 import mountains from "../mountains.jpg";
+import skiing from "../skiing.jpg";
 ---
 
 <Layout title="Welcome to Hell">
@@ -56,15 +57,25 @@ import mountains from "../mountains.jpg";
       </div>
     </div>
   </section>
-    <div class="border-black border w-1/2 ml-[15%] mt-[5%]">
-      <h1 class="text-5xl font-bold mb-4">Title</h1>
-      <p class="text-3xl">Some text underneath the title.</p>
-    </div>
-    
-      {/*<Steam />*/}
-      {/*<Music />*/}
-  </section>
-</Layout>
+            <div class="flex">
+              <div class=" w-1/2 mr-[1%] mt-[5%] mx-[10%] bg-white bg-opacity-50">
+                <h1 class="text-6xl font-bold mb-[1%]">Who am I?</h1>
+                <p class="ml-[3%] text-3xl">
+                  I'm a Year 13 6th Form student currently attending Richard Hale School
+                </p>
+              </div>
+              <div class="w-1/4 mt-[5%]">
+                <Image
+                  src={skiing}
+                  class="w-full h-full object-cover"
+                  alt="Image of me skiing in the Austrian Alps in Wagrain"
+                />
+              </div>
+            </div>
+        </Layout>
+
+{/*<Steam />*/}
+{/*<Music />*/}
 
 <style>
   * {
