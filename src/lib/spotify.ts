@@ -31,14 +31,11 @@ export async function getAccessToken(): Promise<{ access_token: string }> {
 export async function getTopTracks() {
   const { access_token } = await getAccessToken();
 
-  const response = await fetch(
-    "https://api.spotify.com/v1/me/top/tracks",
-    {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+  const response = await fetch("https://api.spotify.com/v1/me/top/tracks", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
     },
-  ).then((res) => res.json());
+  }).then((res) => res.json());
 
   const { items } = z
     .object({
@@ -98,14 +95,11 @@ export async function getFollowersOfArtistFromId(id: string) {
 export async function getTopArtists() {
   const { access_token } = await getAccessToken();
 
-  const response = await fetch(
-    "https://api.spotify.com/v1/me/top/artists",
-    {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+  const response = await fetch("https://api.spotify.com/v1/me/top/artists", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
     },
-  ).then((res) => res.json());
+  }).then((res) => res.json());
 
   const { items } = z
     .object({
