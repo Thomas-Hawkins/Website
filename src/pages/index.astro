@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import "@fontsource/inter";
 import Layout from "../layouts/Layout.astro";
 import Steam from "../components/Steam.astro";
+import Music from "../components/Music.astro";
 import { Image } from "astro:assets";
 import mc_logo from "../mc_logo.jpg";
 import mountains from "../mountains.jpg";
@@ -19,7 +20,7 @@ import mountains from "../mountains.jpg";
             >About</a
           >
           <a
-            href="#"
+            href="/music"
             class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium hover:scale-[1.05] transition-transform duration-300 ease-in-out"
             >Music</a
           >
@@ -54,8 +55,10 @@ import mountains from "../mountains.jpg";
         <h1 class="text-7xl font-black text-white">THOMAS HAWKINS</h1>
       </div>
     </div>
-    <section class="flex flex-wrap justify-center w-full min-h-screen">
+    <section class="flex flex-wrap px-[15%] py-[5%] w-full min-h-screen">
+        <h1 class="text-5xl font-black text-black">Thomas Hawkins</h1>
       {/*<Steam />*/}
+      {/*<Music />*/}
     </section>
   </section>
 </Layout>

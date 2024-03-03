@@ -1,0 +1,29 @@
+---
+import { getTopTracks, getTopArtists } from '../lib/spotify';
+import { Image } from "astro:assets";
+const tracks = await getTopTracks();
+const artists = await getTopArtists();
+---
+
+<section>
+    <h1>Your top tracks</h1>
+    <ul>
+      {tracks.map((track, index) => (
+        <li>
+          {index + 1}. {track.title} by {track.artists.map((_artist, index) => (index ? ', ' : '') + _artist.name)}
+          <Image src={track.image} alt={track.title} width={64} height={64} />
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section>
+    <h1>Your top artists</h1>
+    <ul>
+      {artists.map((artist, index) => (
+        <li>
+          {index + 1}. {artist.name}
+          <Image src={artist.image} alt={artist.name} width={64} height={64} />
+        </li>
+      ))}
+    </ul>
+  </section>
