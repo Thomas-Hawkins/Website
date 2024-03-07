@@ -5,11 +5,11 @@ import Layout from "../layouts/Layout.astro";
 import Steam from "../components/Steam.astro";
 import Music from "../components/Music.astro";
 import { Image } from "astro:assets";
-import mc_logo from "../mc_logo.jpg";
-import mountains from "../mountains.jpg";
-import skiing from "../skiing.jpg";
-import racing from "../racing.jpg";
-import silverstone from "../silverstone.jpg";
+import mc_logo from "../mc_logo.webp";
+import mountains from "../mountains.webp";
+import skiing from "../skiing.webp";
+import racing from "../racing.webp";
+import silverstone from "../silverstone.webp";
 ---
 
 <Layout title="Welcome to Hell">
@@ -27,7 +27,10 @@ import silverstone from "../silverstone.jpg";
           <Image
             class="h-16 w-16 rounded-lg mx-auto centre"
             src={mc_logo}
+            width={128}
+            height={128}
             alt="Logo of a minecraft character"
+            loading="eager"
           />
         </a>
         <div class="flex items-center">
@@ -44,10 +47,11 @@ import silverstone from "../silverstone.jpg";
     <div class="relative">
       <Image
         src={mountains}
-        alt="Image of mountains in Austrian Alps"
-        width={4000}
-        height={1377}
+        alt="Mountains in Austrian Alps"
+        width={2000}
+        height={1100}
         class="lg:min-w-full min-w-[250%]"
+        loading="eager"
       />
       <div class="absolute inset-0 flex flex-col mx-32 my-[170px]">
         <h1 class="text-7xl font-black text-white">THOMAS HAWKINS</h1>
@@ -71,17 +75,21 @@ import silverstone from "../silverstone.jpg";
       <Image
         src={skiing}
         class="w-full h-full object-cover"
-        alt="Image of me skiing in the Austrian Alps in Wagrain"
+        alt="Me skiing in the Austrian Alps in Wagrain"
+        width={1000}
+        height={1000}
+        loading="eager"
       />
     </div>
   </div>
   <div class="relative mt-[4%]">
     <Image
       src={silverstone}
-      alt="Image of Silverstone Circuit in Northamptonshire, UK"
-      width={4000}
-      height={1242}
+      alt="Silverstone Circuit in Northamptonshire, UK"
+      width={2000}
+      height={500}
       class="lg:min-w-full min-w-[250%]"
+      loading="eager"
     />
     <div class="flex">
       <div class="w-1/4 mr-[0.5%] mt-[5%] mx-[20%] bg-white bg-opacity-50">
@@ -102,9 +110,10 @@ import silverstone from "../silverstone.jpg";
         <Image
           src={racing}
           class="w-full h-full object-cover"
-          width={4000}
-          height={1242}
-          alt="Images of me karting at Rye House Kart Circuit, and images of Brands Hatch Circuit and Silverstone 2021 F1 Grand Prix"
+          width={1000}
+          height={1000}
+          alt="Me karting at Rye House Kart Circuit, and images of Brands Hatch Circuit and Silverstone 2021 F1 Grand Prix"
+          loading="eager"
         />
       </div>
     </div>
